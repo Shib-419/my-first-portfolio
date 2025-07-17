@@ -1,0 +1,112 @@
+.project-card {
+    background-color: #1c1b29;
+    border-radius: 15px;
+    padding: 1rem;
+    max-width: 320px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(128, 0, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-content h3 {
+    color: white;
+    margin: 0.5rem 0;
+    background: linear-gradient(270deg, #db2777, #9333ea, #3b82f6, #9333ea, #db2777);
+    background-size: 1000% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveGradient 5s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.project-content p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.project-tags {
+    margin-top: 0.5rem;
+}
+
+.tag {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+/* Vibrant colored tags */
+.tag-react {
+  color: #61dafb; /* React blue */
+}
+
+.tag-mongodb {
+  color: #10b981; /* Teal green */
+}
+
+.tag-tailwind {
+  color: #ec4899; /* Pink */
+}
+
+.tag-html {
+  color: #e34c26;
+}
+
+.tag-css {
+  color: #264de4;
+}
+
+.tag-javascript,
+.tag-js {
+  color: #facc15;
+}
+
+.tag-api {
+  color: #fb923c;
+}
+
+.tag-world {
+  color: #a78bfa;
+}
+
+.tag-hibernate {
+  color: #4b5563;
+}
+
+.tag-jsp {
+  color: #2563eb;
+}
+
+.tag-javaee {
+  color: #f97316;
+}
+
+.tag-nodejs {
+  color: #22c55e;
+}
+
+/* Fallback for unknown tags */
+[class^="tag-"]:not(.tag) {
+  color: #cd1313;
+}

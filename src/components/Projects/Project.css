@@ -1,0 +1,127 @@
+/* Root container */
+#projects {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #03051b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Heading */
+#para,
+.projects-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, rgb(203, 53, 108), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Slider */
+.project-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.8rem;
+  padding: 1rem 0;
+  width: 90%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+.project-slider::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+/* Project card base style */
+.project-card {
+  flex: 0 0 90%;
+  max-width: 90%;
+  scroll-snap-align: start;
+  background-color: #1e1b2e;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0px 3px rgba(147, 51, 234, 0.4), 0 0 3px rgba(147, 51, 234, 0.4);
+
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Content */
+.project-content {
+  margin-top: 1rem;
+}
+
+.project-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+}
+
+/* Tags */
+.project-tags span {
+  margin-right: 0.5rem;
+  font-size: 0.6rem;
+  /* color: #de1414; */
+  background: linear-gradient(to right, rgb(53, 96, 188), white);
+  background-clip: text;
+  color: transparent;
+}
+
+/* GitHub link */
+.github-icon {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #38bdf8;
+}
+
+/* Tablet: show 2 cards */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .project-card {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+
+  .project-slider {
+    width: 90%;
+  }
+}
+
+/* Desktop: show 3 cards */
+@media (min-width: 1024px) {
+  .project-card {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .project-slider {
+    width: 55%;
+  }
+}
